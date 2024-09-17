@@ -1,0 +1,28 @@
+{
+    "name": "draken/iacommunication",
+    "description": "Ce package permet de communiquer avec une IA.",
+    "version": "1.0.0",
+    "keywords": [
+        "Draken",
+        "iacommunication"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "draken\\iacommunication\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Charly Rembelski",
+            "email": "c.rembelski@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.3"
+    }
+}
