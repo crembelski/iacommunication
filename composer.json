@@ -1,10 +1,14 @@
 {
     "name": "crembelski/iacommunication",
-    "description": "This package allows you to communicate with an AI.",
+    "description": "This package allows you to communicate with an OpenAI.",
     "version": "1.0.1",
     "keywords": [
         "crembelski",
-        "iacommunication"
+        "iacommunication",
+        "laravel",
+        "crembelski/iacommunication",
+        "communicate",
+        "OpenAI"
     ],
     "type": "library",
     "license": "MIT",
