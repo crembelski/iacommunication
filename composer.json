@@ -1,16 +1,16 @@
 {
-    "name": "draken/iacommunication",
-    "description": "Ce package permet de communiquer avec une IA.",
+    "name": "crembelski/iacommunication",
+    "description": "This package allows you to communicate with an AI.",
     "version": "1.0.0",
     "keywords": [
-        "Draken",
+        "crembelski",
         "iacommunication"
     ],
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "draken\\iacommunication\\": "src/"
+            "crembelski\\iacommunication\\": "src/"
         }
     },
     "authors": [

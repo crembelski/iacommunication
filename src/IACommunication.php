@@ -1,6 +1,6 @@
 <?php
 
-namespace draken\iacommunication;
+namespace crembelski\iacommunication;
 
 abstract class IACommunication
 {
