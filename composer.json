@@ -1,7 +1,7 @@
 {
     "name": "crembelski/iacommunication",
     "description": "This package allows you to communicate with OpenAI via a simple interface.",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "keywords": [
         "crembelski",
         "iacommunication",
