@@ -26,8 +26,7 @@ class OpenAI implements ServicesInterface
             ],
             'json' => [
                 'model' => 'gpt-3.5-turbo-instruct',
-                'prompt' => $message,
-                'max_tokens' => 150
+                'prompt' => $message
             ],
         ]);
 
