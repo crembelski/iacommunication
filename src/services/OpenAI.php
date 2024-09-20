@@ -1,23 +1,25 @@
 <?php
 
-namespace crembelski\iacommunication;
+namespace crembelski\iacommunication\services;
 
 use GuzzleHttp\Client;
 
-class OpenAI extends IACommunication
+class OpenAI implements ServicesInterface
 {
     protected $url;
-
+    protected $client;
+    protected $apiKey;
+    
     public function __construct($apiKey)
     {
         $this->client = new Client();
         $this->apiKey = $apiKey;
-        $this->url = 'https://api.openai.com/v1/completions';
+        $this->url = 'https://api.openai.com';
     }
 
-    public function sendMessage($message)
+    public function completions(string $message) : string
     {
-        $response = $this->client->post($this->url, [
+        $response = $this->client->post($this->url . '/v1/completions', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->apiKey,
                 'Content-Type' => 'application/json',

@@ -8,8 +8,11 @@ class IACommunicationServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(OpenAI::class, function ($app) {
-            return new OpenAI(config('iacommunication.api_key'));
+        $this->app->singleton(IACommunication::class, function ($app) {
+            return new IACommunication(
+                config('iacommunication.service'),
+                config('iacommunication.api_key')
+            );
         });
     }
 
