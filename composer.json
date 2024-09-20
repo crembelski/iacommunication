@@ -1,7 +1,7 @@
 {
     "name": "crembelski/iacommunication",
     "description": "This package allows you to communicate with OpenAI via a simple interface.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "crembelski",
         "iacommunication",
@@ -27,6 +27,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.3",
-        "guzzlehttp/guzzle": "7.8.1"
+        "guzzlehttp/guzzle": ">=7.8"
     }
 }
