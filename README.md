@@ -26,24 +26,25 @@ This package allows you to communicate with OpenAI via a simple interface.
    php artisan vendor:publish --tag=config --provider="crembelski\iacommunication\IACommunicationServiceProvider"
    ```
 
-4. **Configure Your OpenAI API Key**  
-   Add your OpenAI API Key in the `.env` file of your Laravel application. Example:
+4. **Configure Your OpenAI**  
+   Add your OpenAI API Key and the service name in the `.env` file of your Laravel application. Example:
 
    ```env
    IA_API_KEY=your_openai_api_key_here
+   IA_SERVICE=OpenAI
    ```
 
    Replace `your_openai_api_key_here` with your actual API key from OpenAI.
 
 ## Usage
 
-Once installed and configured, you can use the `sendMessage` method to send a message to OpenAI.
+Once installed and configured, you can use the `completions` method to send a message to OpenAI.
 
 ```php
 use crembelski\iacommunication\IACommunication;
 
 $iaComm = new IACommunication();
-$response = $iaComm->sendMessage("Hello AI!");
+$response = $iaComm->completions("Hello AI!");
 ```
 
 ## License
