@@ -14,6 +14,7 @@ class IACommunication implements ServicesInterface
         switch ($iaService) {
             case 'OpenAI':
                 $this->service = new OpenAI($apiKey);
+            break;
             default:
                 throw new \Exception("Invalid value IA_SERVICE ($iaService) specified in configuration");
         }
