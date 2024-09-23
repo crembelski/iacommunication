@@ -17,8 +17,11 @@ class OpenAI implements ServicesInterface
         $this->url = 'https://api.openai.com';
     }
 
-    public function completions(string $message, string|null $model = 'gpt-3.5-turbo-instruct', int|null $max_token = 1000) : string
+    public function completions(string $message, string $model = null, int $max_token = null) : string
     {
+        $model = $model ?? 'gpt-3.5-turbo-instruct';
+        $max_token = $max_token ?? 1000;
+
         $response = $this->client->post($this->url . '/v1/completions', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->apiKey,
