@@ -20,8 +20,8 @@ class IACommunication implements ServicesInterface
         }
     }
 
-    public function completions(string $message): string
+    public function completions(string $message, string $model = null, int $max_token = null): string
     {
-        return $this->service->completions($message);
+        return $this->service->completions($message, $model, $max_token);
     }
 }

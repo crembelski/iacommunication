@@ -9,7 +9,7 @@ class OpenAI implements ServicesInterface
     protected $url;
     protected $client;
     protected $apiKey;
-    
+
     public function __construct($apiKey)
     {
         $this->client = new Client();
@@ -17,7 +17,7 @@ class OpenAI implements ServicesInterface
         $this->url = 'https://api.openai.com';
     }
 
-    public function completions(string $message) : string
+    public function completions(string $message, string|null $model = 'gpt-3.5-turbo-instruct', int|null $max_token = 1000) : string
     {
         $response = $this->client->post($this->url . '/v1/completions', [
             'headers' => [
@@ -25,8 +25,9 @@ class OpenAI implements ServicesInterface
                 'Content-Type' => 'application/json',
             ],
             'json' => [
-                'model' => 'gpt-3.5-turbo-instruct',
-                'prompt' => $message
+                'model' => $model,
+                'prompt' => $message,
+                'max_tokens' => $max_token
             ],
         ]);
 

@@ -19,7 +19,7 @@ class IACommunicationServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/iacommunication.php' => config_path('iacommunication.php'),
+            __DIR__ . '/../config/iacommunication.php' => config_path('iacommunication.php'),
         ], 'config');
     }
 }
