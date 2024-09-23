@@ -19,7 +19,7 @@ class OpenAITest extends TestCase
 
        // Simuler un retour de la méthode completions
        $mockOpenAI->shouldReceive('completions')
-           ->with('test of completion', Mockery::any(), Mockery::any())
+           ->with('test of completion')
            ->andReturn('Mocked response from OpenAI');
 
        // Injecter ce mock dans IACommunication
